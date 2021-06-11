@@ -1,0 +1,341 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Payment page</title>
+                                <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+<style>
+
+body {
+    background: #f5f5f5
+}
+
+.rounded {
+    border-radius: 1rem
+}
+
+.nav-pills .nav-link {
+    color: #555
+}
+
+.nav-pills .nav-link.active {
+    color: white
+}
+
+input[type="radio"] {
+    margin-right: 5px
+}
+
+.bold {
+    font-weight: bold
+}
+
+a{
+	text-decoration: none;
+	color: #555;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+/*
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}*/
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+/*
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}*/
+
+.btn:hover {
+  background-color: #555;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript'>$(function() {
+$('[data-toggle="tooltip"]').tooltip()
+})</script>
+                            </head>
+                            <body oncontextmenu='return false' class='snippet-body'>
+                            <div class="container py-5">
+
+    <!--Checkout-->
+    <div class="col-50">
+        <h2 style="text-decoration: underline;">Checkout</h2><br>
+        <h3>Shipping Address</h3>
+        <br>
+        <label for="fname"><i class="fa fa-user"></i> First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+        <label for="fname"><i class="fa fa-user"></i> Last Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="email"><i class="fa fa-phone"></i> Phone</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="text">
+        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+        <label for="city"><i class="fa fa-institution"></i> City</label>
+        <input type="text" id="city" name="city" placeholder="New York">
+
+        <div class="row">
+          <div class="col-50">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="NY">
+          </div>
+          <div class="col-50">
+            <label for="zip">Postcode</label>
+            <input type="text" id="zip" name="zip" placeholder="10001">
+          </div>
+        </div>
+      </div>
+      <br> <br>
+      <hr>
+      <br>
+    <!--Cart item details-->
+<div class="small-container cart-page" style="margin: left auto; margin: right auto;">
+    <table style="margin-left:auto;margin-right:auto;">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg" alt="buy1" style="margin-top: 50px;">
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        
+                        <br> 
+
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" style="width: 100px;"></td>
+            <td>$50.00</td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg" alt="buy1">
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        
+                        <br> 
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" style="width: 100px;"></td>
+            <td>$250.00</td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg" alt="buy1">
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        
+                        <br> 
+  
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" style="width: 100px;"></td>
+            <td>$150.00</td>
+        </tr>
+    </table>
+    <br>
+    <div class="total-price">
+        <table style="margin-left:auto;margin-right:auto;">
+            <tr>
+                <td style="font-weight: bold; font-size: large;">Subtotal: </td>
+                <td>$200.00</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: large;">Tax: </td>
+                <td>$5.00</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: large;">Total: </td>
+                <td>$205.00</td> 
+            </tr>
+            <tr>
+<!--Empty Row-->  
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+<br><br>
+    <!-- For demo purpose -->
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-6">Payment Methods</h1>
+        </div>
+    </div> <!-- End -->
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                        <!-- Credit card form tabs -->
+                        <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                            <li class="nav-item"> <a data-toggle="pill" href="#credit-card" class="nav-link active "> <i class="fas fa-credit-card mr-2"></i> Credit Card </a> </li>
+                            <li class="nav-item"> <a data-toggle="pill" href="#paypal" class="nav-link "> <i class="fab fa-paypal mr-2"></i> Paypal </a> </li>
+                            <li class="nav-item"> <a data-toggle="pill" href="#net-banking" class="nav-link "> <i class="fas fa-mobile-alt mr-2"></i> Net Banking </a> </li>
+                        </ul>
+                    </div> <!-- End -->
+                    <!-- Credit card form content -->
+                    <div class="tab-content">
+                        <!-- credit card info-->
+                        <div id="credit-card" class="tab-pane fade show active pt-3">
+                            <form role="form" onsubmit="event.preventDefault()">
+                                <div class="form-group"> <label for="username">
+                                        <h6>Card Owner</h6>
+                                    </label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-control "> </div>
+                                <div class="form-group"> <label for="cardNumber">
+                                        <h6>Card number</h6>
+                                    </label>
+                                    <div class="input-group"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control " required>
+                                        <div class="input-group-append"> <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group"> <label><span class="hidden-xs">
+                                                    <h6>Expiration Date</h6>
+                                                </span></label>
+                                            <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-4"> <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                                <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                            </label> <input type="text" required class="form-control"> </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> <button type="button" class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment </button>
+                            </form>
+                        </div>
+                    </div> <!-- End -->
+                    <!-- Paypal info -->
+                    <div id="paypal" class="tab-pane fade pt-3">
+                        <h6 class="pb-2">Select your paypal account type</h6>
+                        <div class="form-group "> <label class="radio-inline"> <input type="radio" name="optradio" checked> Domestic </label> <label class="radio-inline"> <input type="radio" name="optradio" class="ml-5">International </label></div>
+                        <p> <button type="button" class="btn btn-primary "><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button> </p>
+                        <p class="text-muted"> Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                    </div> <!-- End -->
+                    <!-- bank transfer info -->
+                    <div id="net-banking" class="tab-pane fade pt-3">
+                        <div class="form-group "> <label for="Select Your Bank">
+                                <h6>Select your Bank</h6>
+                            </label> <select class="form-control" id="ccmonth">
+                                <option value="" selected disabled>--Please select your Bank--</option>
+                                <option>Affin Bank</option>
+                                <option>Bangkok Bank</option>
+                                <option>CIMB</option>
+                                <option>HSBC</option>
+                                <option>Maybank</option>
+                                <option>OCBC</option>
+                                <option>RHB Bank</option>
+                                <option>Bank 7</option>
+                                <option>Bank 8</option>
+                                <option>Bank 9</option>
+                                <option>Bank 10</option>
+                            </select> </div>
+                        <div class="form-group">
+                            <p> <button type="button" class="btn btn-primary "><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
+                        </div>
+                        <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                    </div> <!-- End -->
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </div>
+                            </body>
+                        </html>

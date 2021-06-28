@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact us</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      * {
+      box-sizing: border-box;
+      }
+      html, body {
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px; 
+      color: #666;
+      }
+      input, textarea { 
+      outline: none;
+      }
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #f8d5d1;
+      }
+      h1 {
+      margin-top: 0;
+      font-weight: 500;
+      }
+      form {
+      position: relative;
+      width: 80%;
+      border-radius: 30px;
+      background: #fff;
+      }
+      .form-left-decoration,
+      .form-right-decoration {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      border-radius: 20px;
+      background: #ff523b;
+      }
+      .form-left-decoration {
+      bottom: 60px;
+      left: -30px;
+      }
+      .form-right-decoration {
+      top: 60px;
+      right: -30px;
+      }
+      .form-left-decoration:before,
+      .form-left-decoration:after,
+      .form-right-decoration:before,
+      .form-right-decoration:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      border-radius: 30px;
+      background: #fff;
+      }
+      .form-left-decoration:before {
+      top: -20px;
+      }
+      .form-left-decoration:after {
+      top: 20px;
+      left: 10px;
+      }
+      .form-right-decoration:before {
+      top: -20px;
+      right: 0;
+      }
+      .form-right-decoration:after {
+      top: 20px;
+      right: 10px;
+      }
+      .circle {
+      position: absolute;
+      bottom: 80px;
+      left: -55px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      }
+      .form-inner {
+      padding: 40px;
+      }
+      .form-inner input,
+      .form-inner textarea {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 20px;
+      background: #d0dfe8;
+      }
+      .form-inner textarea {
+      resize: none;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 20px;
+      border: none;
+      border-bottom: 4px solid #563434;
+      background: #ff523b; 
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #563434;
+      } 
+      @media (min-width: 568px) {
+      form {
+      width: 60%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Elnina's Concept Gift Shop</Title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="header">
+
+<!--Navigation bar container class-->
+<div class="container">
+	<div class="navbar">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt="logo" width="125px"></a>
+		</div>
+		<nav>
+			<ul id="MenuItems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="account.html">Account</a></li>
+				<li><a href="account.html">EN</a></li>
+				<li>|</li>
+				<li><a href="account.html">BM</a></li>
+			</ul>
+		</nav>
+		<a href="account.html"><img src="images/cart.png" width="30px" height="30px"></a>
+		<img src="images/menu.png" alt="menu-icon" class="menu-icon" onclick="menutoggle()">
+	</div>
+<!--End of Navbar-->
+<div>
+    <form action="/" class="decor">
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="circle"></div>
+      <div class="form-inner">
+        <h1>Contact us</h1>
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message..." rows="5"></textarea>
+        <button type="submit" href="/">Submit</button>
+      </div>
+    </form>
+    <br><br>
+    <div id="LeftFloatAds" style="right: 20px; position: fixed; text-align: left; bottom: 300px;"> 
+      <a href="https://wa.me/60123" target="_blank">
+        <img src="images/wa.png" alt="logo1" width="102px" height="84px" ><h2>Chat with us</h2></a>
+    </div>
+  </div>
+<!------footer---------->
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download Our App</h3>
+				<p>Download App for Android and <br>IOS mobile phone.</p>
+				<div class="app-logo">
+				<img src="images/play-store.png">
+				<img src="images/app-store.png">
+				</div>
+			</div>
+			<div class="footer-col-2">
+				<img src="images/logo-white.png" alt="android" style="height: 95px;">
+				<p>Our purpose is to sustainably make the pleasure and benefits of giving to many.</p>	
+			</div>
+			<div class="footer-col-3">
+				<h3>Useful Links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer-col-4">
+				<h3>Follow Us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>Youtube</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="copyright">Copyright 2021 - Elnina Concept Gift Shop</p>
+	</div>
+</div>
+
+
+  </body>
+</html>
